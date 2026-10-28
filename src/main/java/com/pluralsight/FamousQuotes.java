@@ -23,7 +23,14 @@ public class FamousQuotes {
         System.out.print("Select a number between 1-10 to display a quote: ");
         int numberChoice = read.nextInt();
 
-        System.out.println(favoriteQuotes[numberChoice-1]);
+        try {
+            System.out.println(favoriteQuotes[numberChoice-1]);
+
+        }catch (ArrayIndexOutOfBoundsException error){
+
+            System.out.println("You must enter a number between 1 and 10.");
+        }
+
 
 
 
